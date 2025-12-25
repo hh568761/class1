@@ -33,20 +33,6 @@ const App: React.FC = () => {
     el.click();
   };
 
-  const handleDeployHelp = () => {
-    alert(
-      "🚩 部署与排错终极步骤：\n\n" +
-      "第一步：清理 IDE 缓存\n" +
-      "点击左侧 GitHub 图标 -> 点击三个点(...) -> 选择 'Discard All Changes'。然后重新点击我的回复里的 Apply 按钮。\n\n" +
-      "第二步：提交推送\n" +
-      "点击文件旁的 '+' 号 -> 输入 Commit 信息 -> 点击 Push。\n\n" +
-      "第三步：去 GitHub 网页设置（就是你截图的地方）\n" +
-      "1. 刷新 GitHub 页面。\n" +
-      "2. 在 'Branch' 下拉框里找有没有 'gh-pages'。如果有，选它并点 Save。\n" +
-      "3. 稍等片刻，你的网站就能通过 https://hh568761.github.io/class1/ 访问了！"
-    );
-  };
-
   return (
     <div className="flex h-screen bg-slate-950 text-slate-200 overflow-hidden">
       <Sidebar 
@@ -93,14 +79,6 @@ const App: React.FC = () => {
             >
               导出代码
             </button>
-            {user.role === 'teacher' && (
-              <button 
-                onClick={handleDeployHelp}
-                className="px-4 py-2 bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 rounded-xl text-xs font-bold shadow-lg"
-              >
-                点此查看部署引导
-              </button>
-            )}
           </div>
         </header>
 
