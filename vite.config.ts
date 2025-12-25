@@ -6,7 +6,6 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   
   return {
-    // 自动匹配您的 GitHub 仓库名
     base: '/class1/', 
     plugins: [react()],
     define: {
